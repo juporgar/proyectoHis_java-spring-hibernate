@@ -8,10 +8,10 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
-
+/*Con las entidades generamos automaticamente las tablas en las bases de datos, ya que tenemos la opción created-drop en apllicaciton.proporties*/
 
 @Entity /*Para que lo considere como  una entidad*/
-@Table(name="pacientes")/*Decirle que tabla va a mapear*/
+@Table(name="pacientes")/*Decirle que tabla va a mapear/crear*/
 public class Pacientes implements Serializable {
 
     private static final long serialVersionUID=1L;
