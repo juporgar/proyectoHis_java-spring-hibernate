@@ -25,9 +25,11 @@ public class WebController {
         logger.info("Guardando nuevo paciente");
         DateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd");
         Date date= new Date();
+        dateFormat.format(date);
         Pacientes paciente = new Pacientes("hc123","Xavi","Rodriguez Soler", date);
         pacientesService.save(paciente);
-        logger.info(pacientesService.findAll());
+        logger.info(pacientesService.findOne(1L));
+
         return "index";
     }
 

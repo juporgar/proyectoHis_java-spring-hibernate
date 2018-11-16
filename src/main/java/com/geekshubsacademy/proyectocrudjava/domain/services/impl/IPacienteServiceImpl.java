@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service /*Para indicarle de que es un servicio y podemos inyectarlo donde queramos*/
 public class IPacienteServiceImpl implements IPacientesService {
@@ -27,4 +28,10 @@ public class IPacienteServiceImpl implements IPacientesService {
     public void save(Pacientes paciente) {
         pacienteDao.save(paciente);
     }
+
+    @Override
+    public Optional<Pacientes> findOne(Long id) {
+        return pacienteDao.findById(id);
+    }
+
 }
