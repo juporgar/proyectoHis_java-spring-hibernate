@@ -9,4 +9,5 @@ public interface IPacientesService {
     public List<Pacientes> findAll();
     public void save (Pacientes paciente);
     public Optional<Pacientes> findOne(Long id);
+    public void delete(Long id);
 }

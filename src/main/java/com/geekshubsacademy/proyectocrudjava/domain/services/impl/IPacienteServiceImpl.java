@@ -30,8 +30,14 @@ public class IPacienteServiceImpl implements IPacientesService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Optional<Pacientes> findOne(Long id) {
         return pacienteDao.findById(id);
     }
 
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        pacienteDao.deleteById(id);
+    }
 }

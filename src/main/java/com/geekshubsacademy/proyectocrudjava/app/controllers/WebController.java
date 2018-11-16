@@ -26,11 +26,11 @@ public class WebController {
         DateFormat dateFormat= new SimpleDateFormat("yyyy-MM-dd");
         Date date= new Date();
         dateFormat.format(date);
-        Pacientes paciente = new Pacientes("hc123","Xavi","Rodriguez Soler", date);
+        Pacientes paciente = new Pacientes("hc123","Julian","Portalés García", date);
         pacientesService.save(paciente);
         logger.info(pacientesService.findOne(1L));
-
+        logger.info("Borrando paciente");
+        pacientesService.delete(1L);
         return "index";
     }
-
 }
