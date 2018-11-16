@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IPacientesService {
     public List<Pacientes> findAll();
-
+    public void save (Pacientes paciente);
 }

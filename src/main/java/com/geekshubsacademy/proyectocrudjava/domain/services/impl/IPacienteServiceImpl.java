@@ -21,4 +21,10 @@ public class IPacienteServiceImpl implements IPacientesService {
     public List<Pacientes> findAll() {
         return (List<Pacientes>)pacienteDao.findAll();
     }
+
+    @Override
+    @Transactional
+    public void save(Pacientes paciente) {
+        pacienteDao.save(paciente);
+    }
 }
